@@ -47,7 +47,7 @@ function CreateMap(){
 		debug1+=dataSplit[i]+","
 	}
 	//debug1=debug.substr(debug.length-1,debug.length);
-	alert(debug1);
+	//alert(debug1);
 	//add content to maps
 	var map=document.getElementById("map");
 	map.innerHTML="";
