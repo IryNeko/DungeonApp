@@ -22,7 +22,7 @@ function GetData(){
 		}
 	}
 	alert("successful");
-	CreateMap();
+	//CreateMap();
 	
 }
 function CreateMap(){
