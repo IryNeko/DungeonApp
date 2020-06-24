@@ -4,7 +4,7 @@ var data="";
 //this function saves the current map to cookie so don't have to import every time
 function SaveData(){
 	document.cookie="Map="+data+";";
-	alert("map saved"+document.cookie);
+	alert("map saved");
 }
 function GetData(){
 	//standard cookie extraction
@@ -18,10 +18,10 @@ function GetData(){
 		if (n==true){
 			//if the cookie name is found,new var replace the name= to ""
 			data=dataSplit[i].replace(name,"");
-			alert(data);
+			//alert(data);
 		}
 	}
-	alert("successful");
+	//alert("successful");
 	CreateMap();
 	
 }
@@ -41,7 +41,7 @@ function CreateMap(){
 		debug1+=dataSplit[i]+","
 	}
 	//debug1=debug.substr(debug.length-1,debug.length);
-	alert(debug1);
+	//alert(debug1);
 	//add content to maps
 	var map=document.getElementById("map");
 	map.innerHTML="";
