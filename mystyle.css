@@ -1,12 +1,12 @@
 html{
-			margin-left:5%;
-	margin-right:5%;
+	
 }
 page-container{
 	position:relative;
 }
 body{
-
+	margin-left:5%;
+	margin-right:5%;
 	background-image:url("Dungeonimg.jpg");
 
 }

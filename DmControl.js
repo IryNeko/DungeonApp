@@ -4,13 +4,14 @@
 //
 function CharaEncode(){
 //everything will encode as string and decode will decide later
-	var name=String(document.getElementById("ch_name").value);
-	var clas=String(document.getElementById("ch_clas").value);
-	var level=String(document.getElementById("ch_level").value);
-	var race=String(document.getElementById("ch_race").value);
-	var alignment=String(document.getElementById("ch_ali").value);
-	var hpmax=String(document.getElementById("hpmax").value);
-	var hp=String(document.getElementById("hp").value);
+//old code
+	//var name=String(document.getElementById("ch_name").value);
+	//var clas=String(document.getElementById("ch_clas").value);
+	//var level=String(document.getElementById("ch_level").value);
+	//var race=String(document.getElementById("ch_race").value);
+	//var alignment=String(document.getElementById("ch_ali").value);
+	//var hpmax=String(document.getElementById("hpmax").value);
+	//var hp=String(document.getElementById("hp").value);
 	//------
 	//var name="ali";
 	//var clas="1";
@@ -20,13 +21,32 @@ function CharaEncode(){
 	//var hpmax="12";
 	//var hp="7";
 	//compile character info
-	var chara =[name,clas,level,race,alignment,hpmax,hp];
+	//var chara =[name,clas,level,race,alignment,hpmax,hp];
+	//var display="";
+	//var i;
+	//for (i=0;i<chara.length;i++){
+	//	display= display+chara[i]+"<br>";
+	//}
+	var attributes=document.getElementsByClassName("char");
+	//alert(attributes);
 	var display="";
-	var i;
-	for (i=0;i<chara.length;i++){
-		display= display+chara[i]+"<br>";
+	var charaData="";
+	for (var i=0;i<attributes.length;i++){
+		display+=attributes[i].placeholder+attributes[i].value+"<br>";
+		//store a parsed character data;
+		charaData+=attributes[i].value+"|";
 	}
+	//display created character
 	document.getElementById("ch_preview").innerHTML=display;
+	//alert(charaData);
+	if(attributes[0].value==""){
+		alert("please enter character ID to save");
+		return;
+	}
+	document.cookie=attributes[0].value+"="+charaData+";";
+	alert("Character Created");
+
+	
 }
 //map generator function creates a cookie that is arranged like this
 //Line1=1111231;line2=....
