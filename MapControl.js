@@ -18,9 +18,11 @@ function GetData(){
 		if (n==true){
 			//if the cookie name is found,new var replace the name= to ""
 			data=dataSplit[i].replace(name,"");
+			CreateMap();
 		}
 	}
 	alert("successful");
+	
 }
 function CreateMap(){
 	//inital data is a 10 letter string;data is from the input
