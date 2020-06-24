@@ -117,7 +117,7 @@ function ImportData(){
 }
 function SaveData(){
 	document.cookie="Map="+data+";";
-	alert("map saved"+document.cookie);
+	alert("map saved");
 }
 function GetData(){
 	//standard cookie extraction
@@ -131,7 +131,7 @@ function GetData(){
 		if (n==true){
 			//if the cookie name is found,new var replace the name= to ""
 			data=dataSplit[i].replace(name,"");
-			alert(data);
+			//alert(data);
 		}
 	}
 	alert("successful");
