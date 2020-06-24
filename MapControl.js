@@ -4,7 +4,7 @@ var data="";
 //this function saves the current map to cookie so don't have to import every time
 function SaveData(){
 	document.cookie="Map="+data+";";
-	alert("map saved");
+	alert("map saved"+document.cookie);
 }
 function GetData(){
 	//standard cookie extraction
@@ -18,6 +18,7 @@ function GetData(){
 		if (n==true){
 			//if the cookie name is found,new var replace the name= to ""
 			data=dataSplit[i].replace(name,"");
+			alert(data);
 			CreateMap();
 		}
 	}
