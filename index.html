@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<!--
+Document created for class homework
+Author:Xixun Bu, alias: Brian
+this is for class project only and not intended for any form of publishing
+all the graphic asset from this site is under the fair use exemption.
+Northeastern University, Web development class.
+
+the purpose of this website
+mini dungeon story generator
+I am trying to build a small tool for some online table games.
+WHY DO I WANT THIS
+now with Zoom and other software it becomes feasible for people to play table games like D&D on video conference. The trouble part of the table games is that people has to have some sort of stage. There are others programs out there but I want to try make my own. Of course it is going to be a crude prototype.
+It may also be considered as a game as it has minor intractability
+-->
+
+<!-- GAME DESIGN and Web Layout
+index page: 
+	1.Navigation Manu
+	2.main tag, Project Description Build Update and Some thanks to the instructor
+	3.header with navigation; footer (html5) with project information
+Game page:
+	1.same header and footer
+	2.Timer: time tag
+	3.the play elements, including main message window, a map and a dice device;
+		-message window: display mainly the rolled dice number, saves into JSON cookie.
+		-map: the map shows the map from the database, and saves the map into JSON cookie while the DM interacts with it.
+		-character and monsters box: these can be drag and dropped onto the map and saved.
+		-dice device:a random number generator with dice graphic.
+		-story notes:a note that displays the pre-set story pulled from database;
+Character Page:
+	1.same header and footer
+	2.main tag, display all play characters. pull the character with code from the database, 
+Dungeon master page(heavy use of section tag):
+	1.same header and footer
+	2.design maps by adding blocks to the main map, save into database and get a code
+	3.design character,save into database and get a code for that character
+	4.design monsters same as characters
+	5.story designer, a story can be encoded and saved into database and get a code;
+-->
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<header>
+TableTop Dungeon Tool [demo]<br>
+</header>
+<nav>
+<font size="14">
+<a href="index.html">Front Page</a>//
+<a href="game.html">Into the Dungeon</a>//
+<a href="character.html">Characters</a>//
+<a href="DM.html">Dungeon Master Only</a>
+</font>
+<hr>
+</nav>
+
+<!--this is the title, main is below it -->
+<p id="title">
+Welcome
+</p>
+
+
+<!--main page, build notes and thanks-->
+<main>
+
+<hr>
+<aside>
+<h3>Updates</h3>
+<p>
+6/10/20<br>
+Added an interesting update display log<br>
+Fixed Footer Eating the body issue<br>
+Changed all the pages for more consistency (well end up consistency is more important)<br>
+Working on the Javascript part<br>
+6/17/20<br>
+Added functions:<br>
+Dice Rollers now functional<br>
+added great success and failure condition in 1d20<br>
+Added Clock system for player to track time<br>
+map editor art in progress<br>
+character editor function in progress<br>
+</p>
+</aside>
+<article>
+<h1>Build0.2</h1>
+<p>
+This tool is under development for about 4 weeks and will be updated<br>
+6-3-2020: edited structures and added style sheet<br>
+<h2>Function of this Tool</h2>
+this tool is developed for Discord and Zoom video session of tabletop games. the main purpose is to optimize the experience<br>
+dungeon page allows DM to start a story<br>
+character page allows DM to find characters and change their stats<br>
+dungeon master page provides dungeon and character enditors 
+
+<h2>Why did I write this</h2>
+Currently similar software exists, but they are too complicated with functions while lacking fundamental fun of making story with friends.
+<h2>Special Thanks</h2>
+Thanks professor Karimpour for the support on creation of this site<br>
+also thanks for the TA in Northeastern University
+</p>
+</main>
+</article>
+
+<footer>
+Author:Xixun Bu (Brian)<br>
+Instructor: Amin Karimpour<br>
+Northeastern University<br>
+last updated 5/27/2020
+</footer>
+</body>
+</html>

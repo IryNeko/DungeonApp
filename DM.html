@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<script src="DmControl.js"></script>
+</head>
+<body onload="CreateMap()">
+<header>
+TableTop Dungeon Tool [demo]<br>
+</header>
+<nav>
+<font size="14">
+<a href="index.html">Front Page</a>//
+<a href="game.html">Into the Dungeon</a>//
+<a href="character.html">Characters</a>//
+<a href="DM.html">Dungeon Master Only</a>
+</font>
+<hr>
+</nav>
+
+<!--this is the title, main is below it -->
+
+<p id="title">
+Dungeon Editor
+<hr>
+</p>
+
+<!-- this section focuses on getting the cookies and show player the code they generated -->
+<aside>
+<h3>In the hands of creator</h3>
+<p>
+your map seeds:<br>
+your character seeds:<br>
+your monster seeds:<br>
+</p>
+</aside>
+<article>
+<h2>The World (Map Editor)</h2>
+Map Editor with numbers<br>
+<!--the whole dungeon floor plan is stored as a two dimension array, it encourages people to build it ground-up
+-->
+start building by adding layers from top to bottom<br>
+<input type="submit" onclick="NewMap()" value="New Map"><br>
+currently available map:20x20<br>
+floor type: 0:floor,1:walls,2:grass,3:door<br>
+line <input type="number" placeholder="0" id="linenumber">
+blocks <input type="numbers" placeholder="type 20 numbers" maxlength="20" id="linecontent"><br>
+<input type="submit" onclick="Submit()"><br>
+<input type="submit" onclick="CopyData()" value="Copy Map Data"><br>
+
+<div id="map">[map generated]
+<div></div>
+<div></div>
+</div>
+<div>
+You can import whole map here<br>
+<input type="text" id="import"><br>
+<input type="submit" onclick="ImportData()"><br>
+</div>
+<!--the map will be generated below with js.-->
+</article>
+<article>
+<h2>The Deep (Monster Creator)</h2>
+Monster creation needs a bit more references<br>
+please wait for the next update<br>
+</article>
+<article>
+<h2>The Tavern (Character Creator)</h2>
+<h3>character1</h3><br>
+[main]<br>
+Name: <input type="text" placeholder="change name" id="ch_name"><br>
+Class:<input type="text" id="ch_clas"><input type="number" id="ch_level"><br>
+Background: <input type="text" id="ch_bg"><br>
+Race:<input type="text" id="ch_race"><br>
+Alignment:<input type="text" id="ch_ali"><br>
+[stats]<br>
+Total HP:<input type="number" id="hpmax"><br>
+Current HP:<input type="number" id="hp"><br>
+armor:<br>
+Initiative:<br>
+Speed:<br>
+[moves]<br>
+[equipment]<br>
+[others]<br>
+<input type="submit" value="create character" onclick="CharaEncode()"><br>
+<!--here to do a preview of character-->
+Preview<br>
+<div id="ch_preview"></div>
+</article>
+<!--the following part creates stories,just to make sure that there is something-->
+<article>
+<h2>The Tale (event writer)</h2>
+Current Event:0/0<br>
+<input type="text" placeholder="Please Write the event here"><br><br><br>
+<input type="submit" value="Last Event"><input type="submit" value="Next Event">
+</article>
+<footer>
+
+
+Author:Xixun Bu (Brian)<br>
+Instructor: Amin Karimpour<br>
+Northeastern University<br>
+last updated 5/27/2020
+</footer>
+</body>
+</html>

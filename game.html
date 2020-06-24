@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+<script src="GameControl.js"></script>
+<script src="MapControl.js"></script>
+</head>
+<body onload="GetTime();GetData()">
+<header>
+TableTop Dungeon Tool [demo]<br>
+</header>
+<nav>
+<font size="14">
+<a href="index.html">Front Page</a>//
+<a href="game.html">Into the Dungeon</a>//
+<a href="character.html">Characters</a>//
+<a href="DM.html">Dungeon Master Only</a>
+</font>
+<hr>
+</nav>
+<p id="title">Dungeon Name:xxxx Code:xxxx</p>
+<hr>
+<h2><font color="white" id="current_time" >Current Time: 0：00</font></h2>
+<!-- here comes the main elements
+the main map is on article, and the message is on the aside,aside has dice roller too
+-->
+<article>
+<section >
+<hr>
+<h3>Map</h3>
+You can import whole map here<br>
+<input type="text" id="import"><br>
+<input type="submit" onclick="ImportData()" value="import"><br>
+<input type="submit" onclick="SaveData()" value="confirm map"><br>
+<div>
+<div id="map">
+</div>
+</div>
+<!--<br><br><br>
+this is the map section in an article, result depends on how js work out.
+<br><br><br>-->
+<hr>
+</section>
+<section>
+<h3>Dice Roller</h3>
+<!--this is the dice roller and message-->
+<input type="number" value="1" id="value_1">d<input type="number" placeholder="100" id="value_100"><br>
+Let the RnG decide<input type="submit" onclick="DiceRoll()"><br>
+Dice Roll:<div id="value_result" style="font-size:40px;color:black;text-shadow:0 0 4px red"> Result</div>
+</section>
+<section>
+<h3>Story Teller</h3>
+<p id="map">Current Event</p>
+<input type="submit" value="Last Event"><input type="submit" value="Next Event">
+</section>
+
+</article>
+<aside>
+<h3>story</h3>
+<p>
+this is where the stories are updated
+</p>
+
+</aside>
+<footer>
+
+
+Author:Xixun Bu (Brian)<br>
+Instructor: Amin Karimpour<br>
+Northeastern University<br>
+last updated 5/27/2020
+</footer>
+</body>
+</html>

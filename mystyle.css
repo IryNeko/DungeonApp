@@ -1,0 +1,112 @@
+html{
+			margin-left:5%;
+	margin-right:5%;
+}
+page-container{
+	position:relative;
+}
+body{
+
+	background-image:url("Dungeonimg.jpg");
+
+}
+main{
+
+}
+header{
+	color:white;
+}
+article{
+	width:70%;
+	padding:20px;
+	float:left;
+	outline-width:5px;
+	outline-style:solid;
+	outline-color:rgba(255,255,255,0.8);
+	background-color:rgba(150,150,150,0.8);
+	
+}
+section{
+	width:relative;
+	
+	
+	outline-width:1px;
+	outline-style:solid;
+	outline-color:black;
+}
+a{
+	color:white;
+	opacity:0.4;
+}
+a:hover{
+	color:red;
+}
+footer{
+	margin-top:2.5%;
+	clear:both;
+	float:left;
+	color:white;
+	background-color:black;
+	
+	
+	width:100%;
+}
+aside{
+	padding:2.5%;
+	width:20%;
+	height:1000px;
+	float:right;
+	background-color:rgba(150,150,150,0.5);
+	outline-width:1px;
+	outline-color:white;
+}
+
+h1{
+	color:black;
+	
+}
+h2{
+	font-size:35px;
+	color:rgba(0,0,0,1);
+	text-shadow:0px 0px 2px red;
+}
+h3{
+	font-size:20px;
+	color:rgba(0,0,0,0.8);
+	text-shadow:0px 0px 2px orange;
+}
+input{
+	opacity:0.7;
+}
+input:focus{
+	background-color:rgb(200,200,255);
+}
+#title{
+	color:rgba(255,0,0,0.5);
+	font-size:50px;
+	
+	text-shadow:2px 2px black;
+	
+}
+p#character{
+	
+}
+img#character{
+	max-height:300px;
+	float:right;
+	height:10%
+}
+#map{
+	color:rgba(0,0,0,0);
+	height:800px;
+	width:100%;
+	background-color:black;
+	display:grid;
+	grid-template-columns:4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4% 4%;
+	grid-gap:1px;
+	
+}
+#map div{
+	background-color:white;
+	
+}
