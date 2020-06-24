@@ -9,7 +9,7 @@ function SaveData(){
 function GetData(){
 	//standard cookie extraction
 	var name="Map=";
-	var data=document.cookie;
+	data=document.cookie;
 	//break cookie into pieces
 	var dataSplit=data.split(";")
 	for (var i=0;i<dataSplit.length;i++){
