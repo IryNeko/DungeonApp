@@ -115,3 +115,26 @@ function ImportData(){
 	}
 	
 }
+function SaveData(){
+	document.cookie="Map="+data+";";
+	alert("map saved"+document.cookie);
+}
+function GetData(){
+	//standard cookie extraction
+	var name="Map=";
+	data=document.cookie;
+	//break cookie into pieces
+	var dataSplit=data.split(";")
+	for (var i=0;i<dataSplit.length;i++){
+		//see if the cookie contains the name
+		var n=dataSplit[i].includes(name);
+		if (n==true){
+			//if the cookie name is found,new var replace the name= to ""
+			data=dataSplit[i].replace(name,"");
+			alert(data);
+		}
+	}
+	alert("successful");
+	CreateMap();
+	
+}

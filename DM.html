@@ -47,6 +47,8 @@ line <input type="number" placeholder="0" id="linenumber">
 blocks <input type="numbers" placeholder="type 20 numbers" maxlength="20" id="linecontent"><br>
 <input type="submit" onclick="Submit()"><br>
 <input type="submit" onclick="CopyData()" value="Copy Map Data"><br>
+<input type="submit" value="Get the Current Map" onclick="GetData()">
+<input type="submit" value="Save to Current Map" onclick="SaveData()"><br>
 
 <div id="map">[map generated]
 <div></div>
@@ -56,6 +58,7 @@ blocks <input type="numbers" placeholder="type 20 numbers" maxlength="20" id="li
 You can import whole map here<br>
 <input type="text" id="import"><br>
 <input type="submit" onclick="ImportData()"><br>
+
 </div>
 <!--the map will be generated below with js.-->
 </article>
