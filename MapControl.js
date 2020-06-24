@@ -19,10 +19,10 @@ function GetData(){
 			//if the cookie name is found,new var replace the name= to ""
 			data=dataSplit[i].replace(name,"");
 			alert(data);
-			CreateMap();
 		}
 	}
 	alert("successful");
+	CreateMap();
 	
 }
 function CreateMap(){
